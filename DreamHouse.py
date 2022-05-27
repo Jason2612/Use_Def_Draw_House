@@ -1,0 +1,86 @@
+import turtle
+t = turtle.Turtle()
+t.penup()
+t.pensize(3)
+t.speed(10)
+def bigRec(width, height):
+    for i in range(0, 2):
+        t.forward(width)
+        t.right(90)
+        t.forward(height)
+        t.right(90)
+
+t.goto(-200, 100)
+t.pendown()
+t.fillcolor('yellow')
+t.begin_fill()
+bigRec(210, 280)
+t.end_fill()
+t.penup()
+t.goto(-95, 100)
+t.right(90)
+t.pendown()
+t.forward(280)
+t.penup()
+t.backward(140)
+t.right(90)
+t.pendown()
+t.forward(105)
+t.backward(210)
+
+# Draw smaller house
+t.right(180)
+t.pensize(1.5)
+t.fillcolor('#a6aab0')
+t.begin_fill()
+bigRec(120, 140)
+t.end_fill()
+
+t.penup()
+t.goto(35, -180)
+t.left(90)
+t.pendown()
+
+# Draw door
+t.fillcolor('#488298')
+t.begin_fill()
+bigRec(80, 70)
+bigRec(80, 35)
+t.end_fill()
+
+# Draw window
+t.penup()
+t.goto(-160, 50)
+t.right(90)
+t.pendown()
+t.fillcolor("white")
+t.begin_fill()
+bigRec(30, 50)
+t.end_fill()
+
+t.penup()
+t.goto(-50, 50)
+t.pendown()
+t.fillcolor("white")
+t.begin_fill()
+bigRec(30, 50)
+t.end_fill()
+
+t.penup()
+t.goto(-50, -90)
+t.pendown()
+t.fillcolor("white")
+t.begin_fill()
+bigRec(30, 50)
+t.end_fill()
+
+t.penup()
+t.goto(-160, -90)
+t.pendown()
+t.fillcolor("white")
+t.begin_fill()
+bigRec(30, 50)
+t.end_fill()
+
+
+turtle.done()
